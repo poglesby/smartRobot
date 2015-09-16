@@ -30,4 +30,4 @@ for friend in user.friends():
 
 for line in f:
     api.update_status(status=line)
-    time.sleep(90) #Tweets every 1.5 minutes
+    time.sleep(600) #Tweets every 10 minutes
