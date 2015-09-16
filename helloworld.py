@@ -20,3 +20,7 @@ filename.close()
 for line in f:
     api.update_status(status=line)
     time.sleep(900) #Tweets every 15 minutes
+
+public_tweets=api.home_timeline()
+for tweet in public_tweets:
+    print tweet.text
