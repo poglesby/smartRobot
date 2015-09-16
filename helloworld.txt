@@ -1,2 +1,2 @@
-Hello World!
-I'm a robot! #robot
+Now I only have to figure out how to get my code to look pretty graphically :(
+Also #tweepy api is AWESOME, if only I had more time to dig into it

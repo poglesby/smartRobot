@@ -17,10 +17,17 @@ filename = open(argfile, 'r')
 f = filename.readlines()
 filename.close()
 
-for line in f:
-    api.update_status(status=line)
-    time.sleep(900) #Tweets every 15 minutes
-
 public_tweets=api.home_timeline()
 for tweet in public_tweets:
     print tweet.text
+
+user = api.get_user('thelugal')
+
+print user.screen_name
+print user.followers_count
+for friend in user.friends():
+    print friend.screen_name
+
+for line in f:
+    api.update_status(status=line)
+    time.sleep(90) #Tweets every 1.5 minutes
