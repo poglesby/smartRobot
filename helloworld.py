@@ -1,11 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import tweepy, time, sys, ctypes
+import tweepy, time, sys
 argfile = str(sys.argv[1])
-
-def Mbox(title, text, style):
-    ctypes.windll.user32.MessageBoxA(0, text, title, style)
 
 #enter the corresponding info from your Twitter application
 CONSUMER_KEY = '1mrDAlzvTxbJIgzXlYv2mObaE'
@@ -34,5 +31,3 @@ for tweet in public_tweets:
 for line in f:
     api.update_status(status=line)
     time.sleep(600) #Tweets every 10 minutes
-
-Mbox('TweetBot', 'The program is done',0)
