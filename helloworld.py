@@ -10,6 +10,7 @@ CONSUMER_SECRET = 'nqiNdnGdMyAFZYBDpPRGMMSxf6BIrDC8c08cPsTRzciWWjQnAx'
 ACCESS_KEY = '1119375529-v632xD4cM5x2o6tNZe1yGqjnNP91PJYB2EKXz86'
 ACCESS_SECRET = '02lASoJmg61nOyTdTRfMUCrZINEemAVwleSVu4HZZ2MJY'
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+auth.set_access_token(ACCESS_KEY,ACCESS_SECRET)
 api = tweepy.API(auth)
 
 filename = open(argfile, 'r')
