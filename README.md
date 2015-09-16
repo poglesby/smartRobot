@@ -3,3 +3,4 @@ TODO:
 - make a bot
 - make it smart
 - get it to start tweeting
+- problems with tweepy
