@@ -18,5 +18,5 @@ f = filename.readlines()
 filename.close()
 
 for line in f:
-    api.update_status(line)
+    api.update_status(status=line)
     time.sleep(900) #Tweets every 15 minutes
