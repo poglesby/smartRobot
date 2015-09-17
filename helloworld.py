@@ -15,43 +15,17 @@ api = tweepy.API(auth)
 
 with open (argfile, "r") as filename:
     data=filename.read().replace('\n', ' ')
-    splitline = data.split(';',139)
+    # splitline = data.split(';',139)
 filename.close()
 
-# public_tweets=api.home_timeline()
-# for tweet in public_tweets:
-#     print tweet.text
+def split_by_n(seq, n):
+    """A generator to divide a sequence into chunks of n units."""
+    while seq:
+        yield seq[:n]
+        seq = seq[n:]
 
-# user = api.get_user('thelugal')
-#
-# print user.screen_name
-# print user.followers_count
-# for friend in user.friends():
-#     print friend.screen_name
+tweets = list(split_by_n(data, 140))
 
-# for line in data:
-#     # api.update_status(status=line)
-#     # time.sleep(60) #Tweets every 10 minutes
-#     if len(data) > 140:
-#         print "Input exceeds 140 characters."
-#         data = data[:140]
-#         print data
-#
-# for x in range(0, len(data)):
-#     if len(data) > 140:
-#         api.update_status(status= data[:140])
-#         time.sleep(60)
-#         data = data[140:]
-
-<<<<<<< Updated upstream
-tweetLength = 140
-[data[i:i+x] for i in range(0,len(data),x)]
-=======
-for x in range(0, len(splitline)):
-    # if len(data) > 140:
-        # api.update_status(status= data[:140])
-        # time.sleep(60)
-        # data = data[140]
-    print x
-    print splitline[x]
->>>>>>> Stashed changes
+for line in tweets:
+    api.update_status(status=line)
+    time.sleep(600) #This will tweet 140 characters every 10 minutes
