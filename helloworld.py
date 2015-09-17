@@ -35,9 +35,12 @@ filename.close()
 #         print "Input exceeds 140 characters."
 #         data = data[:140]
 #         print data
+#
+# for x in range(0, len(data)):
+#     if len(data) > 140:
+#         api.update_status(status= data[:140])
+#         time.sleep(60)
+#         data = data[140:]
 
-for x in range(0, len(data)):
-    if len(data) > 140:
-        api.update_status(status= data[:140])
-        time.sleep(60)
-        data = data[140:]
+tweetLength = 140
+[data[i:i+x] for i in range(0,len(data),x)]
