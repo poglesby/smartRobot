@@ -1,1 +1,4 @@
-@sofarsounds var kjempe bra i går natt i Bergen! Jeg gleder meg til neste gang #sofarsounds #bergen
+The point of my tweets from now one will be to figure out how to write a book
+through twitter. The code that I'm working on will allow me to write a text file
+and then that text file should be uploaded to twitter in 140 character chunks.
+I'm uncertain as to how difficult this is going to be.

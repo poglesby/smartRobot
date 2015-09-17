@@ -3,4 +3,4 @@ TODO:
 - make a bot
 - make it smart
 - get it to start tweeting
-- IMPORTANT status=line in for loop
+- IMPORTANT status=line in for loop2

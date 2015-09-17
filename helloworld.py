@@ -13,13 +13,13 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
-filename = open(argfile, 'r')
-f = filename.readlines()
+with open (argfile, "r") as filename:
+    data=filename.read().replace('\n', ' ')
 filename.close()
 
-public_tweets=api.home_timeline()
-for tweet in public_tweets:
-    print tweet.text
+# public_tweets=api.home_timeline()
+# for tweet in public_tweets:
+#     print tweet.text
 
 # user = api.get_user('thelugal')
 #
@@ -28,6 +28,16 @@ for tweet in public_tweets:
 # for friend in user.friends():
 #     print friend.screen_name
 
-for line in f:
-    api.update_status(status=line)
-    time.sleep(600) #Tweets every 10 minutes
+# for line in data:
+#     # api.update_status(status=line)
+#     # time.sleep(60) #Tweets every 10 minutes
+#     if len(data) > 140:
+#         print "Input exceeds 140 characters."
+#         data = data[:140]
+#         print data
+
+for x in range(0, len(data)):
+    if len(data) > 140:
+        api.update_status(status= data[:140])
+        time.sleep(60)
+        data = data[140:]
