@@ -1,0 +1,44 @@
+Python 2.7.10 (default, Jul 13 2015, 12:05:58)
+[GCC 4.2.1 Compatible Apple LLVM 6.1.0 (clang-602.0.53)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> string = "This is and input string, I want to split it every some many characters"
+>>> string
+'This is and input string, I want to split it every some many characters'
+>>> string.split(15)
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: expected a character buffer object
+>>> >>>
+>>> string.splite([15])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'splite'
+>>> string.split([15])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: expected a character buffer object
+>>> string.splite(' ',[15])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'splite'
+>>> string.split(' ',15)
+['This', 'is', 'and', 'input', 'string,', 'I', 'want', 'to', 'split', 'it', 'every', 'some', 'many', 'characters']
+>>> string.split(' ', [15])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: an integer is required
+>>> string.split(;, [15])
+  File "<stdin>", line 1
+    string.split(;, [15])
+                 ^
+SyntaxError: invalid syntax
+>>> string.split(',', [15])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: an integer is required
+>>> string.split(',', 140)
+
+['This is and input string', ' I want to split it every some many characters']
+>>> >>>
+>>> string.split('.', 140)

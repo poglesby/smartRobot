@@ -15,6 +15,7 @@ api = tweepy.API(auth)
 
 with open (argfile, "r") as filename:
     data=filename.read().replace('\n', ' ')
+    splitline = data.split(';',139)
 filename.close()
 
 # public_tweets=api.home_timeline()
@@ -42,5 +43,15 @@ filename.close()
 #         time.sleep(60)
 #         data = data[140:]
 
+<<<<<<< Updated upstream
 tweetLength = 140
 [data[i:i+x] for i in range(0,len(data),x)]
+=======
+for x in range(0, len(splitline)):
+    # if len(data) > 140:
+        # api.update_status(status= data[:140])
+        # time.sleep(60)
+        # data = data[140]
+    print x
+    print splitline[x]
+>>>>>>> Stashed changes
