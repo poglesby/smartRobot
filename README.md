@@ -4,3 +4,5 @@ TODO:
 - make it smart
 - get it to start tweeting
 - IMPORTANT status=line in for loop
+
+USE: http://www.tweepy.org/
