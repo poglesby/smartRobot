@@ -17,6 +17,13 @@ filename = open(argfile, 'r')
 f = filename.readlines()
 filename.close()
 
-for line in f:
-    api.update_status(status=line)
-    time.sleep(900) #Tweets every 15 minutes
+text = ''.join(f)
+string = text.split(".")
+for l in string:
+    api.update_status(status=l[:134] + " #elit")
+    time.sleep(random.randrange(900))
+
+
+# for line in f:
+#     api.update_status(status=line)
+#     time.sleep(900) #Tweets every 15 minutes
